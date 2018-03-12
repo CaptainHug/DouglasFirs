@@ -1,0 +1,18 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/AHX_Twin_Peaks_theme_ahx.ogg-ea5b129946eaa3f595c8d2736ad56b2b.oggstr"
+
+[deps]
+
+source_file="res://sound/AHX_Twin_Peaks_theme_ahx.ogg"
+source_md5="bac4df24f89d9f019697a2f165aaee97"
+
+dest_files=[ "res://.import/AHX_Twin_Peaks_theme_ahx.ogg-ea5b129946eaa3f595c8d2736ad56b2b.oggstr" ]
+dest_md5="eabb39931f4e8bdd9939153657b8f45e"
+
+[params]
+
+loop=true
+loop_offset=0

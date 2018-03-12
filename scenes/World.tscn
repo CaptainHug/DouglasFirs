@@ -1,0 +1,140 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://gfx/grass01.png" type="Texture" id=1]
+[ext_resource path="res://scenes/GroundEdit.gd" type="Script" id=2]
+[ext_resource path="res://gfx/road.png" type="Texture" id=3]
+[ext_resource path="res://scenes/PlayerCar.tscn" type="PackedScene" id=4]
+[ext_resource path="res://scenes/Tyre_Grey.tscn" type="PackedScene" id=5]
+[ext_resource path="res://scenes/Tyre_Red.tscn" type="PackedScene" id=6]
+[ext_resource path="res://scenes/Tree_01.tscn" type="PackedScene" id=7]
+
+[sub_resource type="Curve2D" id=1]
+
+bake_interval = 600.0
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, -8518.48, 243.867, 0, 0, 0, 0, 6281.7, 243.867, 0, 0, 0, 0, 6754.75, 391.713, 0, 0, 0, 0, 6988.19, 632.936, 0, 0, 0, 0, 7159.38, 1092.04, 0, 0, 0, 0, 7731.34, 7996.97 )
+}
+
+[sub_resource type="Curve2D" id=2]
+
+bake_interval = 5.0
+_data = {
+"points": PoolVector2Array(  )
+}
+
+[node name="World" type="Node2D" index="0"]
+
+_sections_unfolded = [ "Material" ]
+
+[node name="CanvasModulate" type="CanvasModulate" parent="." index="0"]
+
+color = Color( 0.292969, 0.292969, 0.292969, 1 )
+
+[node name="TextureRect" type="TextureRect" parent="." index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = -8258.0
+margin_top = -5091.0
+margin_right = 9563.0
+margin_bottom = 7099.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+texture = ExtResource( 1 )
+expand = true
+stretch_mode = 2
+
+[node name="Road" type="Node2D" parent="." index="2"]
+
+[node name="Path2D" type="Path2D" parent="Road" index="0"]
+
+curve = SubResource( 1 )
+script = ExtResource( 2 )
+texture = ExtResource( 3 )
+textureL = ExtResource( 3 )
+textureR = ExtResource( 3 )
+debug = false
+
+[node name="Path2D2" type="Path2D" parent="Road" index="1"]
+
+curve = SubResource( 2 )
+
+[node name="PlayerCar" parent="." index="3" instance=ExtResource( 4 )]
+
+position = Vector2( 485.653, 212.218 )
+
+[node name="Tyres" type="Node2D" parent="." index="4"]
+
+editor/display_folded = true
+
+[node name="Tyre_Grey" parent="Tyres" index="0" instance=ExtResource( 5 )]
+
+position = Vector2( 310.593, 291.64 )
+
+[node name="Tyre_Grey2" parent="Tyres" index="1" instance=ExtResource( 5 )]
+
+position = Vector2( 986.699, 384.145 )
+
+[node name="Tyre_Grey3" parent="Tyres" index="2" instance=ExtResource( 5 )]
+
+position = Vector2( 839.779, 93.0254 )
+
+[node name="Tyre_Grey4" parent="Tyres" index="3" instance=ExtResource( 5 )]
+
+position = Vector2( 86.1313, 501.138 )
+
+[node name="Tyre_Grey5" parent="Tyres" index="4" instance=ExtResource( 5 )]
+
+position = Vector2( 698.3, 688.869 )
+
+[node name="Tyre_Red" parent="Tyres" index="5" instance=ExtResource( 6 )]
+
+position = Vector2( 645.956, 300.414 )
+
+[node name="Tyre_Red2" parent="Tyres" index="6" instance=ExtResource( 6 )]
+
+position = Vector2( 1322.06, 392.919 )
+
+[node name="Tyre_Red3" parent="Tyres" index="7" instance=ExtResource( 6 )]
+
+position = Vector2( 1175.14, 101.799 )
+
+[node name="Tyre_Red4" parent="Tyres" index="8" instance=ExtResource( 6 )]
+
+position = Vector2( 421.494, 509.912 )
+
+[node name="Tyre_Red5" parent="Tyres" index="9" instance=ExtResource( 6 )]
+
+position = Vector2( 1033.66, 697.643 )
+
+[node name="Trees" type="Node2D" parent="." index="5"]
+
+editor/display_folded = true
+
+[node name="Tree_01" parent="Trees" index="0" instance=ExtResource( 7 )]
+
+position = Vector2( 634.105, -66.669 )
+
+[node name="Tree_02" parent="Trees" index="1" instance=ExtResource( 7 )]
+
+position = Vector2( 354.662, -48.1629 )
+
+[node name="Tree_03" parent="Trees" index="2" instance=ExtResource( 7 )]
+
+position = Vector2( 110.38, -88.8765 )
+
+[node name="Tree_04" parent="Trees" index="3" instance=ExtResource( 7 )]
+
+position = Vector2( -135.752, -5.59866 )
+
+[node name="Tree_05" parent="Trees" index="4" instance=ExtResource( 7 )]
+
+position = Vector2( 507.189, 735.181 )
+
+
