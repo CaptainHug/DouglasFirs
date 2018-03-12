@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://gfx/grass01.png" type="Texture" id=1]
 [ext_resource path="res://scenes/GroundEdit.gd" type="Script" id=2]
@@ -7,6 +7,7 @@
 [ext_resource path="res://scenes/Tyre_Grey.tscn" type="PackedScene" id=5]
 [ext_resource path="res://scenes/Tyre_Red.tscn" type="PackedScene" id=6]
 [ext_resource path="res://scenes/Tree_01.tscn" type="PackedScene" id=7]
+[ext_resource path="res://scenes/Stump.tscn" type="PackedScene" id=8]
 
 [sub_resource type="Curve2D" id=1]
 
@@ -22,7 +23,7 @@ _data = {
 "points": PoolVector2Array(  )
 }
 
-[node name="World" type="Node2D" index="0"]
+[node name="World" type="Node2D"]
 
 _sections_unfolded = [ "Material" ]
 
@@ -136,5 +137,25 @@ position = Vector2( -135.752, -5.59866 )
 [node name="Tree_05" parent="Trees" index="4" instance=ExtResource( 7 )]
 
 position = Vector2( 507.189, 735.181 )
+
+[node name="Stump" parent="." index="6" instance=ExtResource( 8 )]
+
+position = Vector2( 970.062, -84.0944 )
+rotation = -1.13274
+
+[node name="Stump4" parent="." index="7" instance=ExtResource( 8 )]
+
+position = Vector2( 1077.01, -86.7352 )
+rotation = 0.920636
+
+[node name="Stump2" parent="." index="8" instance=ExtResource( 8 )]
+
+position = Vector2( 1020.24, -90.6963 )
+rotation = -0.485809
+
+[node name="Stump3" parent="." index="9" instance=ExtResource( 8 )]
+
+position = Vector2( 1127.63, -93.7772 )
+rotation = 0.436549
 
 
